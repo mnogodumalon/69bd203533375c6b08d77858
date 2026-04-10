@@ -1,0 +1,8 @@
+- Einkaufsgruppe (einkaufsgruppe): gruppenname[string/text], beschreibung[string/textarea], einkaufsdatum[date/datetimeminute], treffpunkt[string/text], strasse[string/text], hausnummer[string/text], postleitzahl[string/text], stadt[string/text], max_teilnehmer[number], oeffentlich[bool]
+- Teilnehmer (teilnehmer): vorname[string/text], nachname[string/text], email[string/email], telefon[string/tel], gruppe[applookup/select], bemerkung[string/textarea]
+  → gruppe links to app_id 69bd201272c1eb2d5e90e025
+- Einkaufsliste (einkaufsliste): liste_gruppe[applookup/select], liste_teilnehmer[applookup/select], liste_artikel[applookup/select], menge[number], einheit_freitext[string/text], prioritaet[lookup/radio], status[lookup/radio], hinweis[string/textarea]
+  → liste_gruppe links to app_id 69bd201272c1eb2d5e90e025
+  → liste_teilnehmer links to app_id 69bd201635dec1f676ca482e
+  → liste_artikel links to app_id 69bd2017bdc3f95e8029956d
+- Artikel (artikel): artikelname[string/text], kategorie[lookup/select], einheit[lookup/select], artikelbeschreibung[string/textarea], artikelbild[file]
